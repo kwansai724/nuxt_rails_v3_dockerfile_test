@@ -3,7 +3,6 @@ build:
     web: Dockerfile
   config:
     WORKDIR: app
-    API_URL: https://kwansai724-test.herokuapp.com/
-
+    API_URL: https://kwansai724-test-front.herokuapp.com
 run:
   web: yarn run start

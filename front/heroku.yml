@@ -1,0 +1,9 @@
+build:
+  docker:
+    web: Dockerfile
+  config:
+    WORKDIR: app
+    API_URL: https://kwansai724-test.herokuapp.com/
+
+run:
+  web: yarn run start

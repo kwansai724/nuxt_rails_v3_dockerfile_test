@@ -21,7 +21,12 @@ RUN echo ${API_URL}
 WORKDIR ${HOME}
 
 COPY package*.json ./
-RUN yarn install
+
+RUN apk update && \
+    apk upgrade && \
+    apk add --no-cache make gcc g++ python && \
+    # yarn installの記載場所を移動
+    yarn install
 
 COPY . .
 
